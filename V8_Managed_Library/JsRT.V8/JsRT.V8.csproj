@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JsRT.V8</RootNamespace>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworkIdentifier></TargetFrameworkIdentifier>
+    <Platforms>x64</Platforms>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+      <None  Include="..\..\V8.CoreUXPlugin.Private\runtimes\x64\v8.dll" PackagePath="lib/native" Pack="true"/>
+      <None  Include="..\..\V8.CoreUXPlugin.Private\runtimes\x64\v8.pdb" PackagePath="lib/native" Pack="true"/>
+  </ItemGroup>
+</Project>

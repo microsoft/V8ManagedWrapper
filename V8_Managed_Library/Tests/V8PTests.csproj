@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Microsoft.Search.Frontend.V8</RootNamespace>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworkIdentifier></TargetFrameworkIdentifier>
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\V8Host\JsRT.V8.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Scripts\CommentBox.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\CommentBoxServerRendering.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\Data.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\InstForm.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\InstLink.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\react-dom-server.browser.production16.1.1.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\react.production16.1.1.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\redux.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\Region.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\ServerSideRendering.Instrumentation.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\ServerSideRendering.LayoutWriter.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\ServerSideRenderingDataManager.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="..\V8.CoreUXPlugin.Private\runtimes\x64\v8.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="..\V8.CoreUXPlugin.Private\runtimes\x64\v8.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="CopyV8Dll" AfterTargets="AfterBuild">
+      <Message Text="Copying v8 native dll in output directory" />
+      <Copy SourceFiles="..\..\V8.CoreUXPlugin.Private\runtimes\x64\v8.dll" DestinationFolder="$(OutDir)" />
+      <Copy SourceFiles="..\..\V8.CoreUXPlugin.Private\runtimes\x64\v8.pdb" DestinationFolder="$(OutDir)" />
+  </Target>
+</Project>

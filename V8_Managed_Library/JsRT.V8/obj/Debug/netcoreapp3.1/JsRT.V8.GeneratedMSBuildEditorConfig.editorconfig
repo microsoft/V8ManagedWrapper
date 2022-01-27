@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = JsRT.V8
+build_property.ProjectDir = e:\V8ManagedWrapper\V8_Managed_Library\JsRT.V8\

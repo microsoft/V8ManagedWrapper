@@ -1,0 +1,1 @@
+var ServerSideRenderingDataManager;(function(n){function i(n){return typeof n=="undefined"||n===null?!1:!0}function r(n,r){return i(n)?(t[n]=r,!1):!1}function u(n){return i(n)?t[n]:null}function f(){t=[]}var t=[];n.set=r;n.get=u;n.clear=f})(ServerSideRenderingDataManager||(ServerSideRenderingDataManager={}))

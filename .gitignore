@@ -1,0 +1,24 @@
+# Don't add google V8 source code #
+####################################
+v8/
+
+V8_Native/.vs/
+V8_Native/v8.dll.so
+V8_Native/x64/
+V8_Native/ARM64/
+
+V8_Managed_Library/.vs/
+V8_Managed_Library/Tests/bin/
+V8_Managed_Library/Tests/obj/
+V8_Managed_Library/Tests/obdj/
+V8_Managed_Library/Tests/lib/
+V8_Managed_Library/V8Host/bin/
+V8_Managed_Library/V8Host/obj/
+V8_Managed_Library/V8Host/obdj/
+
+V8.CoreUXPlugin.Private/x64/
+V8.CoreUXPlugin.Private/runtimes/
+
+include/
+bin/
+lib/
